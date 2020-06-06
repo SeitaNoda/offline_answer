@@ -43,7 +43,7 @@ public class SelectChampionActivity extends AppCompatActivity {
 
 
     public void finishGame(View view) {
-        Globals.initAll();
+//        Globals.initAll();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
