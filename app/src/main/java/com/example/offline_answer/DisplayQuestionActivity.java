@@ -36,4 +36,11 @@ public class DisplayQuestionActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void moveDisplayResult(View view) {
+        Intent intent = new Intent(this, DisplayResultActivity.class);
+        startActivity(intent);
+    }
+
+
 }
