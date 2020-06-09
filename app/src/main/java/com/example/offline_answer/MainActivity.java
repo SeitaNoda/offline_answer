@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.offline_answer.MESSAGE";
@@ -25,14 +26,13 @@ public class MainActivity extends AppCompatActivity {
         Player p3 = new Player();
         Globals globals = (Globals) this.getApplication();
 
-        p1.setName("Fukutoku");
-        p1.setAnswer("ジャルジャル");
+        TextView p1Name = findViewById(R.id.playerName1);
+        TextView p2Name = findViewById(R.id.playerName2);
+        TextView p3Name = findViewById(R.id.playerName3);
 
-        p2.setName("Hideki Matsui");
-        p2.setAnswer("檻の中のゴリラ");
-
-        p3.setName("shinji ikari");
-        p3.setAnswer("鶏肉");
+        p1.setName(p1Name.getText().toString());
+        p2.setName(p2Name.getText().toString());
+        p3.setName(p3Name.getText().toString());
 
         globals.p1 = p1;
         globals.p2 = p2;
