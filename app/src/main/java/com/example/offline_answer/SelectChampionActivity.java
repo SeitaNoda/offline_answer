@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class SelectChampionActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,32 +20,48 @@ public class SelectChampionActivity extends AppCompatActivity {
         Player p2 = globals.p2;
         Player p3 = globals.p3;
 
-        CheckBox checkN1 = (CheckBox)findViewById(R.id.checkBoxN1);
-        checkN1.setText(p1.name);
+        RadioButton rb1 = (RadioButton) findViewById(R.id.radioButton1);
+        rb1.setText(p1.answer);
         TextView textA1 = (TextView)findViewById(R.id.textViewAns1);
-        textA1.setText(p1.answer);
+        textA1.setText(p1.name);
 
-        CheckBox checkN2 = (CheckBox) findViewById(R.id.checkBoxN2);
-        checkN2.setText(p2.name);
+        RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton2);
+        rb2.setText(p2.answer);
         TextView textA2 = (TextView)findViewById(R.id.textViewAns2);
-        textA2.setText(p2.answer);
+        textA2.setText(p2.name);
 
-        CheckBox checkN3 = (CheckBox)findViewById(R.id.checkBoxN3);
-        checkN3.setText(p3.name);
+        RadioButton rb3 = (RadioButton) findViewById(R.id.radioButton3);
+        rb3.setText(p3.answer);
         TextView textA3 = (TextView)findViewById(R.id.textViewAns3);
-        textA3.setText(p3.answer);
+        textA3.setText(p3.name);
     }
 
     public void showChampion(View view) {
-        TextView textChamp = (TextView)findViewById(R.id.textViewChampion);
-        textChamp.setText("seikai desu");
-    }
+        String text = "何も選択されていません";
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        int checkedId = radioGroup.getCheckedRadioButtonId();
+        if(checkedId != -1) {
+            text = (String)((RadioButton)findViewById(checkedId)).getText();
+        }
+        TextView textChamp = (TextView)findViewById(R.id.textViewError);
+        textChamp.setText(text);
+     }
 
 
-    public void finishGame(View view) {
-//        Globals.initAll();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+
+    public void decideChamp(View view) {
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        int checkedId = radioGroup.getCheckedRadioButtonId();
+        if(checkedId != -1) {
+            String text = (String)((RadioButton)findViewById(checkedId)).getText();
+            Intent intent = new Intent(this, DisplayChampionActivity.class);
+            intent.putExtra("answer", text);
+            startActivity(intent);
+        }else{
+            TextView textChamp = (TextView)findViewById(R.id.textViewError);
+            textChamp.setText("何も選択されていません");
+        }
+
     }
 
 

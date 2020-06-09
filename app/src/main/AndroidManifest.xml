@@ -10,11 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DisplayChampionActivity"></activity>
         <activity android:name=".SelectChampionActivity" />
         <activity android:name=".InputAnswerActivity" />
         <activity
             android:name=".DisplayTutorialActivity"
             android:parentActivityName=".MainActivity">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -22,8 +24,7 @@
         </activity>
         <activity
             android:name=".DisplayAnswerActivity"
-            android:parentActivityName=".DisplayResultActivity">
-        </activity>
+            android:parentActivityName=".DisplayResultActivity"></activity>
         <activity android:name=".DisplayResultActivity" />
         <activity android:name=".DisplayQuestionActivity" />
         <activity android:name=".MainActivity">
