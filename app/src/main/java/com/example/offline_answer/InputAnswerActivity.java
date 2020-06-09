@@ -55,6 +55,7 @@ public class InputAnswerActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, DisplayQuestionActivity.class);
+        intent.putExtra("pauseTimer", true);
         startActivity(intent);
     }
 }

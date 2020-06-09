@@ -8,4 +8,6 @@ public class Globals extends Application {
     Player p2;
     Player p3;
 
+    long mTimeLeftInMillis;
+
 }
