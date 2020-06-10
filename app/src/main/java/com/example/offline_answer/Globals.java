@@ -7,6 +7,7 @@ public class Globals extends Application {
     Player p1;
     Player p2;
     Player p3;
+    String question;
 
     long mTimeLeftInMillis;
 
