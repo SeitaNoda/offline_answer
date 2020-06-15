@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayQuestionActivity.class);
 
+        // 私はとり五目おにぎりがあまり好きではない。たけのこが入っているからだ。　－アイザック・アシモフ
         Player p1 = new Player();
         Player p2 = new Player();
         Player p3 = new Player();
