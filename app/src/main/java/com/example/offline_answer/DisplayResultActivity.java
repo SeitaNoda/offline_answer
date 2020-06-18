@@ -3,10 +3,13 @@ package com.example.offline_answer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class DisplayResultActivity extends AppCompatActivity {
 
@@ -14,12 +17,6 @@ public class DisplayResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
-
-        OpenHelper dbhelper = new OpenHelper(this);
-        SQLiteDatabase db = dbhelper.getReadableDatabase();
-
-        TextView text0 = (TextView)findViewById(R.id.textViewQ);
-        text0.setText("text");
 
 
         Globals globals = (Globals) this.getApplication();
@@ -35,6 +32,10 @@ public class DisplayResultActivity extends AppCompatActivity {
 
         TextView text3 = (TextView)findViewById(R.id.textViewP3);
         text3.setText(p3.name);
+
+        TextView q = findViewById(R.id.textViewQ);
+        q.setText(globals.question);
+
 
     }
 

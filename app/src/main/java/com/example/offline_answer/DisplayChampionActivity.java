@@ -18,6 +18,12 @@ public class DisplayChampionActivity extends AppCompatActivity {
         String answer = intent.getStringExtra("answer");
         TextView textChamp = (TextView)findViewById(R.id.textViewChamp);
         textChamp.setText(answer);
+
+        Globals globals = (Globals) this.getApplication();
+
+        TextView q = findViewById(R.id.textView8);
+        q.setText(globals.question);
+
     }
 
     public void finishGame(View view) {

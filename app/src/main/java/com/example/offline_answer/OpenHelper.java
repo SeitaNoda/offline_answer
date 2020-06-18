@@ -37,11 +37,11 @@ public class OpenHelper extends SQLiteOpenHelper {
         db.execSQL(
                 SQL_CREATE_ENTRIES
         );
-        saveData(db, "「あ」で始まる、人前でやると恥ずかしいことは？");
-        saveData(db, "「な」で始まる、ご飯が何杯でも食べられるおかずは？");
-        saveData(db, "「た」で始まる、最もうつくしいものは？");
-        saveData(db, "「う」で始まる、プレゼントされたら絶対に喜ぶ一品は？");
-        saveData(db, "「そ」で始まる、やられるとイラっとすることは？");
+        saveData(db, "人前でやると恥ずかしいことは？");
+        saveData(db, "ご飯が何杯でも食べられるおかずは？");
+        saveData(db, "最もうつくしいものは？");
+        saveData(db, "プレゼントされたら絶対に喜ぶ一品は？");
+        saveData(db, "やられるとイラっとすることは？");
     }
 
     @Override
@@ -65,10 +65,5 @@ public class OpenHelper extends SQLiteOpenHelper {
         db.insert("questiondb", null, values);
     }
 
-    //random sortが発生するのでOnlineではやっちゃダメ。
-    public String getQuestion(SQLiteDatabase db) {
-        String query = "SELECT * " + "FROM questiondb order by random()　LIMIT 1";
-        Cursor cursor = db.rawQuery(query, null);
-        return(cursor.getString(0));
-    }
+
 }
