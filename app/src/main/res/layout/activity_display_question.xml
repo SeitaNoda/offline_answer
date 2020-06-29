@@ -53,6 +53,7 @@
         android:layout_marginLeft="80dp"
         android:layout_marginTop="28dp"
         android:text="@string/textview"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerTextView" />
 
@@ -62,8 +63,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:text="@string/textview"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p1Name" />
 
@@ -73,10 +75,35 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:text="@string/textview"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p2Name" />
+
+    <TextView
+        android:id="@+id/p4Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/textview"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p3Name" />
+
+    <TextView
+        android:id="@+id/p5Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/textview"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p4Name" />
 
     <Button
         android:id="@+id/p1Button"
@@ -86,6 +113,7 @@
         android:layout_marginRight="56dp"
         android:onClick="MoveInputAnswer"
         android:text="@string/button"
+        android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/p1Name"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -97,6 +125,7 @@
         android:layout_marginRight="56dp"
         android:onClick="MoveInputAnswer"
         android:text="@string/button"
+        android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/p2Name"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -108,20 +137,46 @@
         android:layout_marginRight="56dp"
         android:onClick="MoveInputAnswer"
         android:text="@string/button"
+        android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/p3Name"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/p5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:onClick="MoveInputAnswer"
+        android:text="@string/button"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/p5Name"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/p4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:onClick="MoveInputAnswer"
+        android:text="@string/button"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/p4Name"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
         android:onClick="moveDisplayResult"
         android:text="@string/endQuestion"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p3Name" />
+        app:layout_constraintTop_toBottomOf="@+id/p5Name" />
 
     <TextView
         android:id="@+id/timerTextView"
