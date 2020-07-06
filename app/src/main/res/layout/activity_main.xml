@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonP1"
         android:layout_width="157dp"
         android:layout_height="68dp"
         android:layout_marginBottom="20dp"
@@ -143,7 +143,7 @@
         android:layout_marginBottom="12dp"
         android:onClick="subtractPlayer"
         android:text="SUBTRACT"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonP1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button7" />

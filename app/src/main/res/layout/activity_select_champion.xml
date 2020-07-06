@@ -18,12 +18,13 @@
 
     <TextView
         android:id="@+id/textViewAns1"
-        android:layout_width="165dp"
-        android:layout_height="41dp"
+        android:layout_width="159dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -35,6 +36,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAns1" />
 
@@ -46,17 +48,43 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAns2" />
 
+    <TextView
+        android:id="@+id/textViewAns4"
+        android:layout_width="162dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAns3" />
+
+    <TextView
+        android:id="@+id/textViewAns5"
+        android:layout_width="162dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAns4" />
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonP1"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:onClick="decideChamp"
         android:text="決定"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
@@ -67,35 +95,53 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonP1" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="205dp"
-        android:layout_height="156dp"
+        android:layout_width="206dp"
+        android:layout_height="256dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" >
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <RadioButton
             android:id="@+id/radioButton1"
             android:layout_width="match_parent"
             android:layout_height="51dp"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:visibility="invisible" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="51dp"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:visibility="invisible" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="51dp"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:text="RadioButton"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:text="RadioButton"
+            android:visibility="invisible" />
+
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
