@@ -40,8 +40,6 @@ public class DisplayQuestionActivity extends AppCompatActivity {
         p2Name.setText(globals.p2.name);
         p3Name.setText(globals.p3.name);
 
-        String question = getQuestion();
-        globals.question = question;
 
         TextView q = findViewById(R.id.textView5);
         q.setText(globals.question);
@@ -106,39 +104,5 @@ public class DisplayQuestionActivity extends AppCompatActivity {
         mTextViewCountDown.setText(timerLeftFormatted);
     }
 
-    private String getQuestion(){
-        OpenHelper dbhelper = new OpenHelper(this);
-        SQLiteDatabase db = dbhelper.getReadableDatabase();
-        Cursor cursor = db.query(
-                "questiondb",
-                new String[] { "question" },
-                null,
-                null,
-                null,
-                null,
-                "random()",
-                "1"
-        );
-
-        String[] mojiList = {"あ","い","う","え","お","か","き","く","こ","さ","し","す",
-                "そ","た","て","と","な","は","ひ","ほ","ま","み","も","が","ぎ","ご","ざ","じ",
-                "だ","ど","ば","び","ぼ","ぱ","ぽ","わ","ら","り","れ","ろ","や","ゆ","よ"};
-
-        int rnd = new Random().nextInt(mojiList.length);
-        String moji = mojiList[rnd];
-
-        String q = "問題を取得できませんでした。";
-
-        if(cursor.moveToFirst()){
-            do{
-                q = cursor.getString(cursor.getColumnIndex("question"));
-            }while(cursor.moveToNext());
-            q = "「" + moji + "」から始まる、"+ q ;
-        }else{
-            q = "問題を取得できませんでした。";
-        }
-
-        return(q);
-    }
 
  }

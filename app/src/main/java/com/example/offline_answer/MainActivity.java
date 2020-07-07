@@ -3,9 +3,13 @@ package com.example.offline_answer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.offline_answer.MESSAGE";
@@ -38,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         globals.p2 = p2;
         globals.p3 = p3;
 
+        String question = getQuestion();
+        globals.question = question;
+
         startActivity(intent);
 
     }
@@ -48,4 +55,42 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    private String getQuestion(){
+        OpenHelper dbhelper = new OpenHelper(this);
+        SQLiteDatabase db = dbhelper.getReadableDatabase();
+        Cursor cursor = db.query(
+                "questiondb",
+                new String[] { "question" },
+                "favorite like ?",
+                new String[] {"1"},
+                null,
+                null,
+                "random()",
+                "1"
+        );
+
+        String[] mojiList = {"あ","い","う","え","お","か","き","く","こ","さ","し","す",
+                "そ","た","て","と","な","は","ひ","ほ","ま","み","も","が","ぎ","ご","ざ","じ",
+                "だ","ど","ば","び","ぼ","ぱ","ぽ","わ","ら","り","れ","ろ","や","ゆ","よ"};
+
+        int rnd = new Random().nextInt(mojiList.length);
+        String moji = mojiList[rnd];
+
+        String q = "問題を取得できませんでした。";
+
+        if(cursor.moveToFirst()){
+            do{
+                q = cursor.getString(cursor.getColumnIndex("question"));
+            }while(cursor.moveToNext());
+            q = "「" + moji + "」から始まる、"+ q ;
+        }else{
+            q = "問題を取得できませんでした。";
+        }
+        cursor.close();
+
+        return(q);
+    }
+
+
 }

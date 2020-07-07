@@ -37,11 +37,11 @@ public class OpenHelper extends SQLiteOpenHelper {
         db.execSQL(
                 SQL_CREATE_ENTRIES
         );
-        saveData(db, "人前でやると恥ずかしいことは？");
-        saveData(db, "ご飯が何杯でも食べられるおかずは？");
-        saveData(db, "最もうつくしいものは？");
-        saveData(db, "プレゼントされたら絶対に喜ぶ一品は？");
-        saveData(db, "やられるとイラっとすることは？");
+        saveData(db, "人前でやると恥ずかしいことは？", 1);
+        saveData(db, "ご飯が何杯でも食べられるおかずは？", 1);
+        saveData(db, "最もうつくしいものは？", 1);
+        saveData(db, "プレゼントされたら絶対に喜ぶ一品は？", 1);
+        saveData(db, "やられるとイラっとすることは？", 1);
     }
 
     @Override
@@ -57,10 +57,10 @@ public class OpenHelper extends SQLiteOpenHelper {
         onUpgrade(db, oldVersion, newVersion);
     }
 
-    public void saveData(SQLiteDatabase db, String question){
+    public void saveData(SQLiteDatabase db, String question, int favo){
         ContentValues values = new ContentValues();
         values.put("question", question);
-        values.put("favorite", false);
+        values.put("favorite", favo);
 
         db.insert("questiondb", null, values);
     }
