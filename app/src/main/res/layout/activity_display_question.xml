@@ -7,7 +7,7 @@
     tools:context=".DisplayQuestionActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewQ"
         android:layout_width="59dp"
         android:layout_height="35dp"
         android:layout_marginStart="24dp"
@@ -28,7 +28,7 @@
         android:text="@string/time"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewQ" />
 
     <TextView
         android:id="@+id/textView5"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewQ" />
 
     <TextView
         android:id="@+id/p1Name"

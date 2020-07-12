@@ -3,10 +3,14 @@ package com.example.offline_answer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class DisplayResultActivity extends AppCompatActivity {
 
@@ -22,6 +26,7 @@ public class DisplayResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
+
 
         Globals globals = (Globals) this.getApplication();
 
@@ -46,6 +51,10 @@ public class DisplayResultActivity extends AppCompatActivity {
             playerViews[i].setVisibility(View.VISIBLE);
             buttons[i].setVisibility(View.VISIBLE);
         }
+
+        TextView q = findViewById(R.id.textViewQ);
+        q.setText(globals.question);
+
 
     }
 

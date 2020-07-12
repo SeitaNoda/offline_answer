@@ -7,7 +7,7 @@
     tools:context=".DisplayResultActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewQ"
         android:layout_width="313dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -26,7 +26,7 @@
         android:text="Player1"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewQ" />
 
     <Button
         android:id="@+id/buttonP1"
@@ -41,7 +41,8 @@
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewP1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewP1" />
+        app:layout_constraintStart_toEndOf="@+id/textViewP1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQ" />
 
     <TextView
         android:id="@+id/textViewP2"

@@ -18,6 +18,9 @@ public class DisplayAnswerActivity extends AppCompatActivity {
 
         Globals globals = (Globals) this.getApplication();
 
+        TextView q = findViewById(R.id.textView3);
+        q.setText(globals.question);
+
         TextView text1 = (TextView)findViewById(R.id.textViewName);
         TextView text2 = (TextView)findViewById(R.id.textViewAnswer);
 

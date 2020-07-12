@@ -21,6 +21,7 @@ public class SelectChampionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_champion);
 
         Globals globals = (Globals) this.getApplication();
+//<<<<<<< flexiblePlayer
 
         radioButtons[0] = (RadioButton) findViewById(R.id.radioButton1);
         radioButtons[1] = (RadioButton) findViewById(R.id.radioButton2);
@@ -41,6 +42,30 @@ public class SelectChampionActivity extends AppCompatActivity {
             radioButtons[i].setVisibility(View.VISIBLE);
             playerViews[i].setVisibility(View.VISIBLE);
         }
+//=======
+//         Player p1 = globals.p1;
+//         Player p2 = globals.p2;
+//         Player p3 = globals.p3;
+
+//         RadioButton rb1 = (RadioButton) findViewById(R.id.radioButton1);
+//         rb1.setText(p1.answer);
+//         TextView textA1 = (TextView)findViewById(R.id.textViewAns1);
+//         textA1.setText(p1.name);
+
+//         RadioButton rb2 = (RadioButton) findViewById(R.id.radioButton2);
+//         rb2.setText(p2.answer);
+//         TextView textA2 = (TextView)findViewById(R.id.textViewAns2);
+//         textA2.setText(p2.name);
+
+//         RadioButton rb3 = (RadioButton) findViewById(R.id.radioButton3);
+//         rb3.setText(p3.answer);
+//         TextView textA3 = (TextView)findViewById(R.id.textViewAns3);
+//         textA3.setText(p3.name);
+
+//         TextView q = findViewById(R.id.textView4);
+//         q.setText(globals.question);
+
+//>>>>>>> master
     }
 
     public void showChampion(View view) {

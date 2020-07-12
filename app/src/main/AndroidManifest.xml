@@ -10,7 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DisplayChampionActivity"></activity>
+        <activity android:name=".ManageListActivity"
+            android:parentActivityName=".ManageQuestionActivity"/>
+        <activity
+            android:name=".ManageQuestionActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".DisplayChampionActivity" />
         <activity android:name=".SelectChampionActivity" />
         <activity android:name=".InputAnswerActivity" />
         <activity
@@ -24,7 +29,7 @@
         </activity>
         <activity
             android:name=".DisplayAnswerActivity"
-            android:parentActivityName=".DisplayResultActivity"></activity>
+            android:parentActivityName=".DisplayResultActivity" />
         <activity android:name=".DisplayResultActivity" />
         <activity android:name=".DisplayQuestionActivity" />
         <activity android:name=".MainActivity">
