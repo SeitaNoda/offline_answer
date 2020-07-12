@@ -34,6 +34,10 @@ public class SelectChampionActivity extends AppCompatActivity {
         rb3.setText(p3.answer);
         TextView textA3 = (TextView)findViewById(R.id.textViewAns3);
         textA3.setText(p3.name);
+
+        TextView q = findViewById(R.id.textView4);
+        q.setText(globals.question);
+
     }
 
     public void showChampion(View view) {

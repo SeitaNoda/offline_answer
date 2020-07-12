@@ -3,6 +3,8 @@ package com.example.offline_answer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import java.util.Random;
 
 public class DisplayQuestionActivity extends AppCompatActivity {
     public static final String ID_ANSWER = "com.example.offline_answer.MESSAGE";
@@ -36,6 +39,10 @@ public class DisplayQuestionActivity extends AppCompatActivity {
         p1Name.setText(globals.p1.name);
         p2Name.setText(globals.p2.name);
         p3Name.setText(globals.p3.name);
+
+
+        TextView q = findViewById(R.id.textView5);
+        q.setText(globals.question);
 
         mTextViewCountDown = findViewById(R.id.timerTextView);
 
@@ -96,5 +103,6 @@ public class DisplayQuestionActivity extends AppCompatActivity {
         String timerLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
         mTextViewCountDown.setText(timerLeftFormatted);
     }
+
 
  }

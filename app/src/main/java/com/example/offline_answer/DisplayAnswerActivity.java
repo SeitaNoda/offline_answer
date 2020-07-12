@@ -21,8 +21,13 @@ public class DisplayAnswerActivity extends AppCompatActivity {
         Player p2 = globals.p2;
         Player p3 = globals.p3;
 
+        TextView q = findViewById(R.id.textView3);
+        q.setText(globals.question);
+
         TextView text1 = (TextView)findViewById(R.id.textViewName);
         TextView text2 = (TextView)findViewById(R.id.textViewAnswer);
+
+
 
         switch(id){
             case 1:
