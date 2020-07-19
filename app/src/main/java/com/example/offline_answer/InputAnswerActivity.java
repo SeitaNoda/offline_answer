@@ -56,6 +56,10 @@ public class InputAnswerActivity extends AppCompatActivity {
         TextView targetName = findViewById(R.id.targetPlayerName);
         targetName.setText(target.name);
 
+        TextView q = findViewById(R.id.textView10);
+        q.setText(globals.question);
+
+
     }
 
     public void FinishAnswer(View view){
