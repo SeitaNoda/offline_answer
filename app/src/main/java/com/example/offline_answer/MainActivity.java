@@ -18,14 +18,21 @@ public class MainActivity extends AppCompatActivity {
     private int playerNum = 3;
     private int maxPlayerNum = 5;
     private int minPlayerNum = 2;
-    private Player players[] = new Player[maxPlayerNum];
+    private Player[] players = new Player[maxPlayerNum];
     private TextView[] playerViews = new TextView[maxPlayerNum];
-    private String playerIds[] = new String[playerNum];
+    private String[] playerIds = new String[playerNum];
+
+    private String[] playerNameInit = {"test", "test2", "test3", "test4", "test5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Globals globals = (Globals) this.getApplication();
+
+        playerNum = globals.playerNum;
+
         // TODO: べた書き対処
         playerViews[0] = findViewById(R.id.playerName1);
         playerViews[1] = findViewById(R.id.playerName2);
@@ -35,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Textviewはdefault:invisible設定
         for (int i=0; i<playerNum; i++){
+            if (globals.playersGlobal.size() == 0) {
+                playerViews[i].setText(playerNameInit[i]);
+            }else {
+                playerViews[i].setText(globals.playersGlobal.get(i).name);
+            }
             playerViews[i].setVisibility(View.VISIBLE);
         }
     }
@@ -62,8 +74,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void addPlayer(View view){
 
+        Globals globals = (Globals) this.getApplication();
+
         if ( playerNum < maxPlayerNum && playerNum >= minPlayerNum){
             playerNum++;
+        }
+
+        if (globals.playersGlobal.size() == 0) {
+            playerViews[playerNum-1].setText(playerNameInit[playerNum-1]);
+        }else {
+            playerViews[playerNum-1].setText(globals.playersGlobal.get(playerNum-1).name);
         }
         playerViews[playerNum-1].setVisibility(View.VISIBLE);
     }
@@ -118,6 +138,5 @@ public class MainActivity extends AppCompatActivity {
 
         return(q);
     }
-
 
 }

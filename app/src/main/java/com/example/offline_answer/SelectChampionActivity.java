@@ -62,8 +62,8 @@ public class SelectChampionActivity extends AppCompatActivity {
 //         TextView textA3 = (TextView)findViewById(R.id.textViewAns3);
 //         textA3.setText(p3.name);
 
-//         TextView q = findViewById(R.id.textView4);
-//         q.setText(globals.question);
+         TextView q = findViewById(R.id.textView4);
+         q.setText(globals.question);
 
 //>>>>>>> master
     }

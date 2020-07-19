@@ -9,7 +9,7 @@ public class Globals extends Application {
 
     List<Player> playersGlobal = new ArrayList<>();
 
-    int playerNum;
+    int playerNum = 3;
 
     Player p1;
     Player p2;

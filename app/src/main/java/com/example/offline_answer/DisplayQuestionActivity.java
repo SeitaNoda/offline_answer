@@ -62,7 +62,6 @@ public class DisplayQuestionActivity extends AppCompatActivity {
             buttons[i].setVisibility(View.VISIBLE);
         }
 
-
         TextView q = findViewById(R.id.textView5);
         q.setText(globals.question);
 
