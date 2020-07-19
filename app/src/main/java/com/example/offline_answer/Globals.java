@@ -18,4 +18,9 @@ public class Globals extends Application {
 
     long mTimeLeftInMillis;
 
+    public Globals(){
+        for (int i=0; i<5; i++){
+            this.playersGlobal.add(i, this.p1);
+        }
+    }
 }

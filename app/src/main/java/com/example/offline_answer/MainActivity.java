@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Textviewはdefault:invisible設定
         for (int i=0; i<playerNum; i++){
-            if (globals.playersGlobal.size() == 0) {
+            if (globals.playersGlobal.get(i) == null) {
                 playerViews[i].setText(playerNameInit[i]);
             }else {
                 playerViews[i].setText(globals.playersGlobal.get(i).name);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0; i<playerNum; i++){
             players[i] = new Player();
             players[i].setName(playerViews[i].getText().toString());
-            globals.playersGlobal.add(i, players[i]);
+            globals.playersGlobal.set(i, players[i]);
         }
 
         globals.playerNum = playerNum;
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             playerNum++;
         }
 
-        if (globals.playersGlobal.size() == 0) {
+        if (globals.playersGlobal.get(playerNum-1) == null) {
             playerViews[playerNum-1].setText(playerNameInit[playerNum-1]);
         }else {
             playerViews[playerNum-1].setText(globals.playersGlobal.get(playerNum-1).name);
