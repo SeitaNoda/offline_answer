@@ -8,31 +8,68 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="138dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/textViewName"
-        android:layout_width="148dp"
+        android:layout_width="140dp"
         android:layout_height="47dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginRight="136dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textViewAnswer"
-        android:layout_width="145dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="303dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="48dp"
+        android:textSize="18sp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:text="問題"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="回答者"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewName"
+        app:layout_constraintEnd_toStartOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="159dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        android:onClick="FinishDisplay"
+        android:text="確認完了"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAnswer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

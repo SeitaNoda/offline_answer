@@ -8,28 +8,27 @@
 
     <Button
         android:id="@+id/buttonP1"
-        android:layout_width="157dp"
-        android:layout_height="68dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="194dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:onClick="moveQuestion"
-        android:text="@string/start"
-        android:textSize="28sp"
+        android:text="会議をはじめる"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerName5"
-        app:layout_constraintVertical_bias="0.726" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
         android:onClick="MoveTutorial"
         android:text="@string/tutorial"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -37,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="54dp"
-        android:text="@string/offline"
+        android:text="@string/title"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,7 +47,7 @@
         android:id="@+id/playerName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="はまだ"
@@ -95,7 +94,6 @@
         android:text="みむら"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerName4"
         tools:visibility="invisible" />
@@ -128,23 +126,37 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:onClick="addPlayer"
-        android:text="ADD"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button8"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="+"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/textView7" />
 
     <Button
         android:id="@+id/button8"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="4dp"
+        android:onClick="subtractPlayer"
+        android:text="−"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button7"
+        app:layout_constraintStart_toEndOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:onClick="subtractPlayer"
-        android:text="SUBTRACT"
-        app:layout_constraintBottom_toTopOf="@+id/buttonP1"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="manageQuestion"
+        android:text="問題作成"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

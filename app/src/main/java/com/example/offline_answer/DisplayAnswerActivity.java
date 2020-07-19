@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class DisplayAnswerActivity extends AppCompatActivity {
@@ -66,6 +68,11 @@ public class DisplayAnswerActivity extends AppCompatActivity {
 //                break;
 //        }
 
+    }
+
+    public void FinishDisplay(View view){
+        Intent intent = new Intent(this, DisplayResultActivity.class);
+        startActivity(intent);
     }
 
 }

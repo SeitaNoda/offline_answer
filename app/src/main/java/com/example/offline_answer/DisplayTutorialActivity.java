@@ -14,10 +14,6 @@ public class DisplayTutorialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_tutorial);
     }
 
-    public void manageQuestion(View view){
-        Intent intent = new Intent(this, ManageQuestionActivity.class);
-        startActivity(intent);
-    }
 
 
 }

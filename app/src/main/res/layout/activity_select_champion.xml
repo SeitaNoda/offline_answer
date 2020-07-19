@@ -8,19 +8,20 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="261dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:text="T kara Hajimaru Oishii Okazu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/textViewAns1"
-        android:layout_width="159dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="TextView"
@@ -30,8 +31,8 @@
 
     <TextView
         android:id="@+id/textViewAns2"
-        android:layout_width="162dp"
-        android:layout_height="34dp"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -42,8 +43,8 @@
 
     <TextView
         android:id="@+id/textViewAns3"
-        android:layout_width="162dp"
-        android:layout_height="37dp"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -54,8 +55,8 @@
 
     <TextView
         android:id="@+id/textViewAns4"
-        android:layout_width="162dp"
-        android:layout_height="37dp"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -66,8 +67,8 @@
 
     <TextView
         android:id="@+id/textViewAns5"
-        android:layout_width="162dp"
-        android:layout_height="37dp"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -99,10 +100,10 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="206dp"
+        android:layout_width="180dp"
         android:layout_height="256dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
@@ -143,5 +144,17 @@
             android:visibility="invisible" />
 
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:text="問題"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

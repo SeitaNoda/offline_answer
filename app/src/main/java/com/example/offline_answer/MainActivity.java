@@ -60,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void manageQuestion(View view){
+        Intent intent = new Intent(this, ManageQuestionActivity.class);
+        startActivity(intent);
+    }
+
+
     public void addPlayer(View view){
 
         if ( playerNum < maxPlayerNum && playerNum >= minPlayerNum){

@@ -10,22 +10,22 @@
         android:id="@+id/button3"
         android:layout_width="141dp"
         android:layout_height="55dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:onClick="finishGame"
-        android:text="会議室から出る"
+        android:text="会議室をでる"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewChamp" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="307dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:text="「あ」から始まる、アンパンマンの必殺技"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView12"
@@ -41,11 +41,23 @@
 
     <TextView
         android:id="@+id/textViewChamp"
-        android:layout_width="224dp"
-        android:layout_height="135dp"
+        android:layout_width="273dp"
+        android:layout_height="93dp"
         android:layout_marginTop="16dp"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:text="問題"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

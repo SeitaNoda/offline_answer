@@ -2,9 +2,10 @@
     <string name="app_name">offline_answer</string>
     <string name="start">start</string>
     <string name="tutorial">遊び方</string>
-    <string name="offline">朝までそれ正解 offline</string>
-    <string name="endQuestion">解答終了</string>
+    <string name="title">みんなの正解</string>
+    <string name="endQuestion">回答をおわる</string>
     <string name="button">Button</string>
+    <string name="answerbutton">回答</string>
     <string name="textview">TextView</string>
     <string name="time">制限時間</string>
     <string name="_3_00">3:00</string>

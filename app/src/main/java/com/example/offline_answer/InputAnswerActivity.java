@@ -28,6 +28,9 @@ public class InputAnswerActivity extends AppCompatActivity {
 
         Globals globals = (Globals) this.getApplication();
 
+        TextView q = findViewById(R.id.textView10);
+        q.setText(globals.question);
+
         Intent intent = getIntent();
         int id = intent.getIntExtra("id", 0);
         // TODO:べた書き対処

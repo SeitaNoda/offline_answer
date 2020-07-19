@@ -8,20 +8,20 @@
 
     <TextView
         android:id="@+id/textViewQ"
-        android:layout_width="313dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:text="T Kara Hajimaru Oishii Okazu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textViewP1"
-        android:layout_width="219dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="140dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
         android:text="Player1"
         android:visibility="invisible"
@@ -30,26 +30,22 @@
 
     <Button
         android:id="@+id/buttonP1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:onClick="moveDisplayAnswer"
-        android:text="Answer"
+        android:text="確認"
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewP1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewP1"
-        app:layout_constraintTop_toBottomOf="@+id/textViewQ" />
+        app:layout_constraintStart_toEndOf="@+id/textViewP1" />
 
     <TextView
         android:id="@+id/textViewP2"
-        android:layout_width="217dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="140dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:visibility="invisible"
@@ -58,10 +54,10 @@
 
     <TextView
         android:id="@+id/textViewP3"
-        android:layout_width="212dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="140dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:visibility="invisible"
@@ -70,10 +66,10 @@
 
     <TextView
         android:id="@+id/textViewP4"
-        android:layout_width="212dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="140dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:visibility="invisible"
@@ -82,10 +78,10 @@
 
     <TextView
         android:id="@+id/textViewP5"
-        android:layout_width="212dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="140dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:visibility="invisible"
@@ -94,71 +90,75 @@
 
     <Button
         android:id="@+id/buttonP2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:onClick="moveDisplayAnswer"
-        android:text="Answer"
+        android:text="確認"
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewP2"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewP2" />
 
     <Button
         android:id="@+id/buttonP3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:onClick="moveDisplayAnswer"
-        android:text="Answer"
+        android:text="確認"
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewP3"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewP3" />
 
     <Button
         android:id="@+id/buttonP4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:onClick="moveDisplayAnswer"
-        android:text="Answer"
+        android:text="確認"
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewP4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toEndOf="@+id/textViewP3" />
+        app:layout_constraintStart_toEndOf="@+id/textViewP4" />
 
     <Button
         android:id="@+id/buttonP5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:onClick="moveDisplayAnswer"
-        android:text="Answer"
+        android:text="確認"
         android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewP5"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewP5" />
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="194dp"
+        android:layout_height="64dp"
         android:layout_marginTop="24dp"
         android:onClick="moveSelectChampion"
-        android:text="next"
+        android:text="議論へ進む"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewP5" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:text="問題"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
